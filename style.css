@@ -1,0 +1,599 @@
+/* Modern Global CSS System Variables */
+:root {
+    --gold: #D4AF37;
+    --gold-hover: #AA820A;
+    --gold-light: #F3E5AB;
+    --dark-bg: #0F0F12;
+    --card-bg: #16161D;
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --red-accent: #8B0000;
+    --red-hover: #B22222;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .logo-text {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 18, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shield-logo {
+    font-size: 24px;
+}
+
+.logo-text {
+    color: var(--gold);
+    font-size: 20px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--text-primary);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background-image: url('hero_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(15, 15, 18, 0.95) 30%, rgba(15, 15, 18, 0.4) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.hero-subtitle {
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #FFF, var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--gold);
+    color: var(--dark-bg);
+    margin-right: 15px;
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-hover);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+    border: 2px solid var(--text-primary);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-primary);
+    color: var(--dark-bg);
+}
+
+/* Sections General */
+.section {
+    padding: 100px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--gold);
+    margin-top: 10px;
+}
+
+.section-title.text-center::after {
+    margin: 10px auto 0 auto;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+/* Grid System */
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.lead-text {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.text-block p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+/* Quote Box */
+.quote-box {
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+}
+
+.quote {
+    font-size: 16px;
+    color: var(--gold-light);
+    margin-bottom: 5px;
+}
+
+cite {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Media Block & Image Styling */
+.image-wrapper {
+    position: relative;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    filter: grayscale(15%) contrast(105%);
+    transition: var(--transition);
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.02);
+    filter: grayscale(0%) contrast(100%);
+}
+
+.img-source {
+    font-size: 10px;
+    color: var(--text-secondary);
+    text-align: right;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Accordion (Uzbrojenie) */
+.accordion-item {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(22, 22, 29, 0.8), rgba(22, 22, 29, 0.4));
+    transition: var(--transition);
+}
+
+.accent-number {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.accordion-header h3 {
+    font-size: 18px;
+}
+
+.accordion-content {
+    max-height: 0;
+    padding: 0 20px;
+    opacity: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.accordion-item.active {
+    border-color: var(--gold);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px;
+    padding: 0 20px 20px 60px;
+    opacity: 1;
+}
+
+.accordion-item.active .accordion-header {
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+/* Battle Tactics Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tactics-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.tactics-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.1);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.tactics-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--gold-light);
+}
+
+.tactics-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Simulation Section (Zwycięstwa) */
+.interactive-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.sidebar-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.battle-btn {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: left;
+}
+
+.battle-btn h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    transition: var(--transition);
+}
+
+.battle-btn span {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.battle-btn:hover, .battle-btn.active {
+    border-color: var(--gold);
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+.battle-btn.active h4 {
+    color: var(--gold);
+}
+
+.simulation-screen {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.battle-details h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: var(--gold);
+}
+
+/* Proportions Bar Chart */
+.proportions-container {
+    margin-bottom: 30px;
+}
+
+.faction-bar {
+    display: flex;
+    height: 35px;
+    border-radius: 4px;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.faction {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: #FFF;
+}
+
+.faction.pl {
+    background-color: var(--red-accent);
+}
+
+.faction.enemy {
+    background-color: #3b4252;
+    justify-content: flex-end;
+}
+
+.battle-desc {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.stat-highlights {
+    display: flex;
+    gap: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 25px;
+}
+
+.highlight-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.hl-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.hl-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold-light);
+}
+
+/* Footer styling */
+footer {
+    background-color: #0B0B0D;
+    padding: 60px 0 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+    margin-bottom: 40px;
+}
+
+.footer-logo h4 {
+    color: var(--gold);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    color: var(--text-secondary);
+    max-width: 400px;
+    font-size: 14px;
+}
+
+.footer-links h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .grid-2col {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .grid-2col.reverse {
+        direction: rtl;
+    }
+    
+    .grid-2col.reverse .text-block, .grid-2col.reverse .media-block {
+        direction: ltr;
+    }
+    
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .interactive-container {
+        grid-template-columns: 1fr;
+    }
+}

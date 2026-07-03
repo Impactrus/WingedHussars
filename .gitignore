@@ -1,0 +1,6 @@
+# .gitignore
+# Exclude system files and IDE configurations
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store

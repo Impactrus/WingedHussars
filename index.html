@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winged Hussars | Skrzydlata Chwała Rzeczypospolitej</title>
+    <meta name="description" content="Odkryj historię najskuteczniejszej kawalerii w dziejach świata. Poznaj uzbrojenie, taktykę i legendarne szarże Polskich Husarzy.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="shield-logo">🛡️</span>
+            <span class="logo-text">WINGED HUSSARS</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="active">Początek</a>
+            <a href="#history">Historia</a>
+            <a href="#weapons">Uzbrojenie</a>
+            <a href="#tactics">Taktyka</a>
+            <a href="#interactive">Zwycięstwa</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h5 class="hero-subtitle">ELITA POLSKIEJ KAWALERII</h5>
+            <h1 class="hero-title">POGROMCY IMPERIÓW</h1>
+            <p class="hero-desc">Przez ponad 125 lat budzili strach na polach bitew całej Europy. Poznaj niesamowite dzieje husarii — formacji, która łączyła niezrównaną taktykę, spektakularną odwagę i charakterystyczne skrzydła.</p>
+            <div class="hero-actions">
+                <a href="#history" class="btn btn-primary">Odkryj Historię</a>
+                <a href="#weapons" class="btn btn-secondary">Zobacz Zbroję</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Overview Section -->
+    <section id="history" class="section history-section">
+        <div class="container">
+            <h2 class="section-title">Narodziny Legendy</h2>
+            <div class="grid-2col">
+                <div class="text-block">
+                    <p class="lead-text">Początki husarii sięgają przełomu XV i XVI wieku. Początkowo uformowana z zaciężnych jeźdźców serbskich jako lekka kawaleria, w drugiej połowie XVI wieku została zreformowana przez króla Stefana Batorego w ciężkozbrojną formację przełamującą.</p>
+                    <p>Dzięki unikalnemu połączeniu ciężkiej ochrony zbroi z manewrowością i potężną siłą uderzeniową kopii, husaria stała się koronną bronią Rzeczypospolitej Obojga Narodów w starciach ze Szwedami, Rosjanami, Turkami i Tatarami.</p>
+                    <div class="quote-box">
+                        <p class="quote">"Husarz na dobrym koniu przebije kopią każdego wroga, a zbroja jego odbije każdą kulę z muszkietu."</p>
+                        <cite>— XVII-wieczne kroniki wojskowe</cite>
+                    </div>
+                </div>
+                <div class="media-block">
+                    <div class="image-wrapper">
+                        <!-- Custom source annotation embedded: generated using DeepMind Antigravity Image Generator -->
+                        <img src="hero_bg.png" alt="Szarża Husarii" class="hero-img">
+                        <div class="img-source">Źródło grafiki: Antigravity Image Generator (Generowane AI)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weapons & Armor (Showcase) Section -->
+    <section id="weapons" class="section weapons-section">
+        <div class="container">
+            <h2 class="section-title text-center">Zbroja i Rynsztunek</h2>
+            <p class="section-subtitle text-center">Połączenie najwyższej próby rzemiosła i funkcji bojowej.</p>
+            
+            <div class="grid-2col reverse">
+                <div class="media-block">
+                    <div class="image-wrapper">
+                        <!-- Custom source annotation embedded: generated using DeepMind Antigravity Image Generator -->
+                        <img src="armor_showcase.png" alt="Uzbrojenie Husarza" class="showcase-img">
+                        <div class="img-source">Źródło grafiki: Antigravity Image Generator (Generowane AI)</div>
+                    </div>
+                </div>
+                <div class="text-block">
+                    <div class="accordion-item active" onclick="toggleAccordion(0)">
+                        <div class="accordion-header">
+                            <span class="accent-number">01</span>
+                            <h3>Zbroja Płytowa</h3>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Składała się z napierśnika, naplecznika, obojczyka, naramienników i karwaszy chroniących przedramiona. Wykonana z hartowanej stali, ozdabiana mosiężnymi rozetami, krzyżami i wizerunkami Matki Boskiej. Często pokryta skórami dzikich zwierząt (leopardów, tygrysów) podkreślającymi status społeczny husarza.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" onclick="toggleAccordion(1)">
+                        <div class="accordion-header">
+                            <span class="accent-number">02</span>
+                            <h3>Kopia Husarska</h3>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Kluczowa broń przełamująca o długości od 4.5 do nawet 6.2 metra. Kopia była drążona w środku (pusta), dzięki czemu była lekka i niezwykle sztywna. Używana tylko raz — pękała podczas uderzenia w klatkę piersiową lub zbroję wroga, tworząc ogromną wyrwę w szeregach przeciwnika.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" onclick="toggleAccordion(2)">
+                        <div class="accordion-header">
+                            <span class="accent-number">03</span>
+                            <h3>Koncerz i Szabla</h3>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Szabla husarska (często typu paluch) uchodzi za szczytowe osiągnięcie w dziedzinie broni siecznej — idealnie wyważona do cięć z konia. Koncerz (długi na ok. 1.5m szpad) służył do kłucia leżącego wroga po złamaniu kopii.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Battle Tactics Section -->
+    <section id="tactics" class="section tactics-section">
+        <div class="container">
+            <h2 class="section-title text-center">Geniusz Taktyki Polowej</h2>
+            <p class="section-subtitle text-center">Dlaczego szarża husarska była tak zabójczo skuteczna?</p>
+            
+            <div class="card-grid">
+                <div class="tactics-card">
+                    <div class="card-icon">🏇</div>
+                    <h3>Zacieśnianie Szyku</h3>
+                    <p>Husaria ruszała do szarży w luźnym szyku (ok. 3-4 metrów między końmi), aby zminimalizować straty od ognia artylerii. Dopiero kilkadziesiąt metrów przed wrogiem jeźdźcy zacieśniali szyk kolano w kolano, uderzając jak lity mur ze stali i mięśni.</p>
+                </div>
+
+                <div class="tactics-card">
+                    <div class="card-icon">🪶</div>
+                    <h3>Psychologia Skrzydeł</h3>
+                    <p>Skrzydła z piór orlich lub sępich nie tylko chroniły plecy jeźdźca przed cięciami i lasso, ale wywoływały potężny efekt psychologiczny. Szum piór podczas szarży płoszył konie wroga, a husarze wyglądali na nadludzkie istoty.</p>
+                </div>
+
+                <div class="tactics-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Długość Zasięgu</h3>
+                    <p>Husarska kopia była celowo dłuższa niż piki piechoty wroga (które miały ok. 4-5 metrów). Husarz mógł uderzyć i przebić pikiniera zanim ten zdołał sięgnąć grotem jego konia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Battle Simulation Map -->
+    <section id="interactive" class="section interactive-section">
+        <div class="container">
+            <h2 class="section-title text-center">Największe Triumfy na Mapie</h2>
+            <p class="section-subtitle text-center">Kliknij na bitwę, aby odtworzyć przebieg i proporcje wojsk.</p>
+            
+            <div class="interactive-container">
+                <div class="sidebar-selector">
+                    <div class="battle-btn active" onclick="selectBattle('kircholm')">
+                        <h4>Kircholm (1605)</h4>
+                        <span>Husaria vs Szwecja</span>
+                    </div>
+                    <div class="battle-btn" onclick="selectBattle('kluszyn')">
+                        <h4>Kłuszyn (1610)</h4>
+                        <span>Husaria vs Rosja i Najemnicy</span>
+                    </div>
+                    <div class="battle-btn" onclick="selectBattle('wieden')">
+                        <h4>Wiedeń (1683)</h4>
+                        <span>Odsiecz Sobieskiego vs Turcja</span>
+                    </div>
+                </div>
+
+                <div class="simulation-screen">
+                    <div class="battle-details">
+                        <h3 id="battle-name">Bitwa pod Kircholmem (1605)</h3>
+                        <div class="proportions-container">
+                            <div class="faction-bar">
+                                <div class="faction pl" id="fact-pl" style="width: 25%;">Polska: 3 600</div>
+                                <div class="faction enemy" id="fact-enemy" style="width: 75%;">Szwecja: 11 000</div>
+                            </div>
+                        </div>
+                        <p id="battle-desc" class="battle-desc">Jan Karol Chodkiewicz rozgromił trzykrotnie silniejsze wojska szwedzkie. Kluczem była pozorowana ucieczka i niesamowite przełamujące uderzenie husarii, która rozbiła szwedzki szyk piechoty w zaledwie kilkanaście minut.</p>
+                        <div class="stat-highlights">
+                            <div class="highlight-item">
+                                <span class="hl-label">Straty wroga:</span>
+                                <span class="hl-value" id="val-losses">~6 000 zabitych</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="hl-label">Straty własne:</span>
+                                <span class="hl-value" id="val-losses-pl">~100 zabitych</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h4>WINGED HUSSARS</h4>
+                    <p>Skrzydlata chwała oręża polskiego. Nowoczesne, interaktywne kompendium historyczne.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Nawigacja</h5>
+                    <a href="#home">Początek</a>
+                    <a href="#history">Historia</a>
+                    <a href="#weapons">Zbroja</a>
+                    <a href="#tactics">Taktyka</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Winged Hussars. Zaprojektowano na potrzeby portfolio.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
